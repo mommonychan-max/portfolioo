@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #F2F0EC;
+}
+
+::selection {
+  background-color: #E11D2E;
+  color: #0A0A0A;
+}
+
+/* visible keyboard focus, since none of the interactive elements use default outlines */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #E11D2E;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
